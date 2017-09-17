@@ -464,14 +464,7 @@ primos_hasta_11500[0] = 1
 for i in range(tope):
 	acum += combinaciones[swap_row][i] - primos_hasta_11500[i]
 
-#print(primos_hasta_11500[0:12])
-#print(combinaciones[swap_row][0:30])
-#print(swap_row)
 print (acum)
-##print(lista_de_primos[i])
-
-##print (primos_hasta_11500)
-#print (combinaciones)
 El output fue el siguiente: <b> 540992328500517893750391624101174224 </b>
 
 Y ahora usé este script para jugar con las conversiones de a 2 números a Hex y el Xor contra la otra cadena.
@@ -491,9 +484,6 @@ otraCadena_en_lista = ["0x"+otraCadena_en_str[i*2]+otraCadena_en_str[i*2+1] for 
 
 resultado = [int(otraCadena_en_lista[i],16)^int(X_en_lista[i],16) for i in range(18)]
 resultado_hex = [hex(int(otraCadena_en_lista[i],16)^int(X_en_lista[i],16)) for i in range(18)]
-
-#print(resultado)
-#print(resultado_hex)
 
 resultado_corrido=""
 resultado_hex_corrido=""

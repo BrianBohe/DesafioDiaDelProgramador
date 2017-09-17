@@ -240,7 +240,12 @@ IGVzYSBjYWRlbmEgZm9ybWFkYSBwb3IgWCBhcGzDrXF1ZWxlIHVuIFhPUiBjb24gZXN0YSBvdHJh
 IGNhZGVuYSB0YW1iacOpbiBlbiBIZXhhICI2NzNkYmMwN2I3MzY2NDJiYTY0ZDJkYTU1NTcwNTYz
 Nzc2NzQiCgpZIGxvIHF1ZSBvYnRlbmdhcyBjb21vIHJlc3B1ZXN0YSBzZXLDoSB1biBzdHJpbmcg
 ZG9uZGUgZW5jb250cmFyYSBzdSBzYWx2YWNpw7NuLgo=
+
+
 Probé con muchas funciones de hash hasta que di con Base64. Usé otra vez el mismo sitio de antes http://online-toolz.com/tools/text-base64-convertor.php.
+
+
+
 Cacho: Hola Pedro, la cagamos. El capi medio borracho se la dio contra un iceberg y se nos está llenando de agua el barco.
 Pedro: Que es lo que ha ocurrido? de más detalles.
 Cacho: Son las 23:50 y nos hundimos, mande ayuda.
@@ -280,10 +285,17 @@ Considere que son 2 bytes, 0x64 y 0x53
 A esa cadena formada por X aplíquele un XOR con esta otra cadena también en Hexa "673dbc07b736642ba64d2da5557056377674"
 
 Y lo que obtengas como respuesta será un string donde encontrara su salvación.
+
+
+
+
 El problema es parecido a 01 subset sum y los "tipos de cambio", con la salvedad que tenemos que asegurarnos no considerar los cambios donde se usó exactamente una moneda.
 La primera solución la hice en C++ porque costumbre. Separé la criba de la dinámica para testear más rápido.
 
 <h4>Para sacar los primos (Criba)</h4>
+
+
+```python
 #include <iostream>
 #include <cstring>
 #include <cstdio>
@@ -341,7 +353,14 @@ int main(int argc, char* argv[]){
 
 	return 0;
 }
+```
+
+
+
 <h4>Ahora la dinámica</h4>
+
+
+```python
 #include <iostream>
 #include <cstring>
 #include <cstdio>
@@ -420,7 +439,13 @@ int main(int argc, char* argv[]){
 	//cout << acum << "\n";
 	return 0;
 }
+```
+
+
 Como tuve un problema de overflow, tuve que usar <b>__int128</b>, pero después tuve problemas al querer printearlos con el operador "<<". Así que la pasé a python 3 que no tiene "problemas" con el tamaño para representar los enteros (a menos que uses nunmpy). La entrada es la lista de primos generados anteriormente por stdin.
+
+
+```python
 import fileinput
 
 tope = 11501
@@ -465,6 +490,10 @@ for i in range(tope):
 	acum += combinaciones[swap_row][i] - primos_hasta_11500[i]
 
 print (acum)
+```
+
+
+
 El output fue el siguiente: <b> 540992328500517893750391624101174224 </b>
 
 Y ahora usé este script para jugar con las conversiones de a 2 números a Hex y el Xor contra la otra cadena.

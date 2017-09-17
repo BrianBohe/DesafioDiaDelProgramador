@@ -28,7 +28,7 @@ Image(filename='imagenes/desafioprogramador.png')
 
 <h2>Morse a Texto</h2>
 
-Usé identify para ver las propiedades de la imagen (si es RGB, ancho*alto, etc). Seguro Mac tiene algo de esto para hacerlo pero fiaca.
+Usé identify para ver las propiedades de la imagen (si es RGB, ancho*alto, etc).
 
 
 ```python

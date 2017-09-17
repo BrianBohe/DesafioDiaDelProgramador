@@ -1,5 +1,7 @@
 # Prerequisites
 *.d
+**.DS_Store
+**.ipynb_checkpoints
 
 # Compiled Object files
 *.slo
